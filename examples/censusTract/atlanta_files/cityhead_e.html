@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.citypopulation.de/cityhead_e.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>City Population Menu</title>
+	<meta charset="utf-8">
+	<script>
+var vizMode = "";
+try { 
+	vizMode = parent.vizMode;
+} catch (ex) {
+}
+if (vizMode != "") {
+	document.writeln('<meta name="viewport" content="width='+vizMode+',initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">');
+	document.writeln('<link rel="stylesheet" href="citymobi.css" media="all,handheld">');
+}
+else {
+	document.writeln('<link rel="stylesheet" href="city.css" media="all,handheld">');
+	if (parent.cp.isTouchDevice())
+		document.writeln('<link rel="stylesheet" href="citytouch.css" media="all,handheld">');
+}
+	</script><link rel="stylesheet" href="http://www.citypopulation.de/city.css" media="all,handheld">
+
+<style type="text/css"></style></head>
+<body lang="en-us" class="head">
+
+<a href="http://www.citypopulation.de/" target="_top">
+<figure id="logo">
+</figure>
+</a>
+
+<nav id="menu">
+<ul>
+	<li class="spaceitem">&nbsp;</li>
+	<span class="row">
+		<li class="lmenu"><a href="http://www.citypopulation.de/" title="Home" target="_top">HOME</a></li>
+		<li><a href="http://www.citypopulation.de/mapindex.html" title="Map Index" target="_top">INDEX</a></li>
+	</span>
+	<span class="row">
+		<li><a href="http://www.citypopulation.de/search.html" title="Site Search" target="_top">SEARCH</a></li>
+		<li><a href="http://www.citypopulation.de/new.html" title="New &amp; Updated Pages" target="_top">NEW</a></li>
+	</span>
+	<span class="row">
+		<li><a href="http://www.citypopulation.de/explanation.html" title="Help, Abbreviations etc." target="_top">HELP</a></li>
+		<li class="lmenu"><a href="http://www.citypopulation.de/references.html" title="Links &amp; References" target="_top">REFs</a></li>
+	</span>
+	<li class="spaceitem">&nbsp;</li>
+	<li class="langitem"><a href="javascript:parent.cp.changeLangPage()" target="_top"><img src="langmobi_de.gif" alt="Deutsch" title="Deutsch"></a></li>
+</ul>
+</nav>
+
+
+
+</body></html>

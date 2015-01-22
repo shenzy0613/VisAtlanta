@@ -1,0 +1,142 @@
+[
+  {
+    "Address":"1048 ATLANTIC DR NW",
+    "Type":"Residential",
+    "Since":1920,
+    "Sqft":1652,
+    "Pic":"https://cbks3.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=120&ll=33.783312,-84.397718&yaw=223.9&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":5,
+    "Lat":33.7633,
+    "Lon":-84.4077
+  },
+  {
+    "Address":"1217 ATLANTIC DR NW",
+    "Type":"Residential",
+    "Since":1940,
+    "Sqft":1061,
+    "Pic":"https://cbks0.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=120&ll=33.788023,-84.397647&yaw=17.0&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":7,
+    "Lat":33.768,
+    "Lon":-84.4076
+  },
+  {
+    "Address":"1056 STATE ST NW",
+    "Type":"Residential",
+    "Since":1909,
+    "Sqft":1848,
+    "Pic":"https://cbks0.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.783504,-84.398970&yaw=278.4&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":4,
+    "Lat":33.7635,
+    "Lon":-84.4093
+  },
+  {
+    "Address":"1110 STATE ST NW",
+    "Type":"Residential",
+    "Since":1950,
+    "Sqft":900,
+    "Pic":"https://cbks2.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.784761,-84.398857&yaw=274.3&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":10,
+    "Lat":33.7648,
+    "Lon":-84.4092
+  },
+  {
+    "Address":"1139 TUMLIN ST NW",
+    "Type":"Residential",
+    "Since":1920,
+    "Sqft":2100,
+    "Pic":"https://cbks3.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=120&ll=33.785222,-84.400638&yaw=152.4&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":12,
+    "Lat":33.7852,
+    "Lon":-84.4006
+  },
+  {
+    "Address":"480 James P Brawley Dr NW",
+    "Type":"Residential",
+    "Since":1945,
+    "Sqft":1604,
+    "Pic":"https://cbks3.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.767699,-84.412591&yaw=277.6&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":24,
+    "Lat":33.7677,
+    "Lon":-84.4128
+  },
+  {
+    "Address":"423 ELM ST NW",
+    "Type":"Residential",
+    "Since":2007,
+    "Sqft":881,
+    "Pic":"https://cbks2.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.766159,-84.408841&yaw=97.6&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":17,
+    "Lat":33.7661,
+    "Lon":-84.4085
+  },
+  {
+    "Address":"802 CHESTNUT PL NW",
+    "Type":"Residential",
+    "Since":2005,
+    "Sqft":1632,
+    "Pic":"https://cbks0.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.761174,-84.413822&yaw=173.8&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":15,
+    "Lat":33.761,
+    "Lon":-84.4138
+  },
+  {
+    "Address":"794 CHESTNUT PL NW",
+    "Type":"Residential",
+    "Since":1930,
+    "Sqft":984,
+    "Pic":"https://cbks1.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.761176,-84.413386&yaw=190.1&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":14,
+    "Lat":33.761,
+    "Lon":-84.4134
+  },
+  {
+    "Address":"957 NEAL ST NW",
+    "Type":"Residential",
+    "Since":1954,
+    "Sqft":1194,
+    "Pic":"https://cbks2.google.com/cbk?output=thumbnail&cb_client=maps_sv&thumb=2&thumbfov=60&ll=33.766418,-84.418916&yaw=11.3&thumbpegman=1&w=300&h=118",
+    "Been Vacant for":19,
+    "Lat":33.7666,
+    "Lon":-84.4188
+  },
+  {
+    "Address":"1692 Springer Street NW",
+    "Type":"Commercial",
+    "Since":1990,
+    "Sqft":3100,
+    "Pic":"http://www.loopnet.com/Attachments/B/1/4/B14BE3E5-6A2A-4498-8766-122EE0A29319.JPG",
+    "Been Vacant for":6,
+    "Lat":33.8013,
+    "Lon":-84.4177
+  },
+  {
+    "Address":"1425 Ellsworth Industrial Boulevard",
+    "Type":"Commercial",
+    "Since":1955,
+    "Sqft":9749,
+    "Pic":"http://www.loopnet.com/Attachments/A/8/D/A8DA63E5-F4F2-45F2-AE42-5AF6E4216C0A.jpg",
+    "Been Vacant for":13,
+    "Lat":33.7935,
+    "Lon":-84.426
+  },
+  {
+    "Address":"1122 Northside DR NW",
+    "Type":"Commercial",
+    "Since":1960,
+    "Sqft":31880,
+    "Pic":"http://www.loopnet.com/Attachments/F/5/F/F5F2E6A9-7686-4517-9798-E36676E224EB.jpg",
+    "Been Vacant for":19,
+    "Lat":33.7853,
+    "Lon":-84.407
+  },
+  {
+    "Address":"955 Marietta Street Northwest",
+    "Type":"Commercial",
+    "Since":1959,
+    "Sqft":3750,
+    "Pic":"http://www.loopnet.com/Attachments/3/6/D/36D468C4-020B-4DCC-8540-30E3FED38540.jpg",
+    "Been Vacant for":20,
+    "Lat":33.7785,
+    "Lon":-84.4093
+  }
+]

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+        <title>Google Maps Multiple Markers</title> 
+        <script src="http://maps.google.com/maps/api/js?sensor=false" 
+        type="text/javascript"></script>
+        <!-- // <script type="text/javascript" src="js/geoXML3.js"></script> -->
+        <!-- // <script type="text/javascript" src="js/ZipFile.complete.js"></script> -->
+
+        <script type="text/javascript" src="http://geoxml3.googlecode.com/svn/branches/polys/geoxml3.js">
+        </script>
+        <script type="text/javascript" src="http://geoxml3.googlecode.com/svn/trunk/ProjectedOverlay.js">
+        </script>
+        <!-- // <script type="text/javascript" src="js/ProjectedOverlay.js"></script> -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head> 
+    <body>
+        <div id="map" style="width: 1000px; height: 1000px;">
+          
+        </div>
+
+        <div id="mapInfoWindow" style="position: fixed;height: 100px; width:300px; background:white; border:1px solid black;">this is a map info window</div>
+
+        <script type="text/javascript">
+        // var mapInfoWindow = $("#mapInfoWindow");
+
+        //contants
+        
+        var polyStyle = {fillColor: "#1abc9c", strokeColor: "#1abc9c", fillOpacity: 0.1, strokeWidth:0};
+        var polyHighlightStyle = {ffillColor: "#1abc9c", strokeColor: "#1abc9c", fillOpacity: 0.8, strokeWidth:0};
+        // var polyHighlightStyle = {fillColor: "#1abc9c", strokeColor: "#1abc9c", fillOpacity: 0.8, strokeWidth:0};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: new google.maps.LatLng(37.422104808, -122.083885),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var myParser = new geoXML3.parser({
+            map: map,
+            suppressInfoWindows: true,
+            // processStyles: true,
+            // createMarker: addMyMarker,
+            // createOverlay: addMyOverlay,
+            afterParse: useTheData
+        });
+
+        myParser.parse('../data/CTFinal.kml');
+
+        var parsedKML;
+
+        function useTheData(doc) {
+
+            //  var sidebarHtml = '<table>';
+            geoXmlDoc = doc[0];
+            console.log(geoXmlDoc);
+
+            for (var i = 0; i < geoXmlDoc.placemarks.length; i++) {
+                // console.log(doc[0].markers[i].title);
+                var placemark = geoXmlDoc.placemarks[i];
+                if (placemark.polygon) {
+                    // var normalStyle = {
+                    //     strokeColor: placemark.polygon.get('strokeColor'),
+                    //     strokeWeight: placemark.polygon.get('strokeWeight'),
+                    //     strokeOpacity: placemark.polygon.get('strokeOpacity'),
+                    //     fillColor: placemark.polygon.get('fillColor'),
+                    //     fillOpacity: placemark.polygon.get('fillOpacity')
+                    // };
+                    placemark.polygon.setOptions(polyStyle);
+                    highlightPoly(placemark.polygon, i, placemark.description);
+                }
+                // if (placemark.polyline) {
+
+                //     // var normalStyle = {
+                //     //     strokeColor: placemark.polyline.get('strokeColor'),
+                //     //     strokeWeight: placemark.polyline.get('strokeWeight'),
+                //     //     strokeOpacity: placemark.polyline.get('strokeOpacity')
+                //     // };
+                //     placemark.polyline.normalStyle = polyStyle;
+
+                //     highlightPoly(placemark.polyline, i);
+                // }
+
+            }
+        }
+        ;
+
+        function addMyMarker(placemark) {
+
+            // Marker handling code goes here
+            if (someCondition) {
+                myParser.createMarker(placemark);
+            }
+        }
+
+
+
+        function highlightPoly(poly, polynum, polygonDesc) {
+
+            google.maps.event.addListener(poly, "mouseover", function() {
+                var rowElem = document.getElementById('row' + polynum);
+                if (rowElem)
+                    rowElem.style.backgroundColor = "#FFFA5E";
+                if (geoXmlDoc.placemarks[polynum].polygon) {
+                    poly.setOptions(polyHighlightStyle);
+                } else if (geoXmlDoc.placemarks[polynum].polyline) {
+                    poly.setOptions(polyHighlightStyle);
+                }
+                showTooltip(polygonDesc);
+                
+            });
+            google.maps.event.addListener(poly, "mouseout", function() {
+                var rowElem = document.getElementById('row' + polynum);
+
+                poly.setOptions(polyStyle);
+
+                hideTooltip();
+            });
+        }
+
+        function addMyOverlay(groundOverlay) {
+            // Overlay handling code goes here
+            if (someCondition) {
+                myParser.createOverlay(groundOverlay);
+            }
+        }
+
+        function showTooltip(text){
+
+            $("#mapInfoWindow").show().html(text);
+            $(document).mousemove(function (event) {
+              $("#mapInfoWindow").css({top:event.pageY+20, left: event.pageX+20});
+            }); 
+        }
+
+        function hideTooltip(){
+            $("#mapInfoWindow").off("mousemove").hide();
+        }
+
+
+        </script>
+    </body>
+</html>

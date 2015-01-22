@@ -1,0 +1,169 @@
+#cp_chart_logo_1, #cp_chart_logo_2 {
+	position: absolute;
+	left: 0px; top: 5px;
+	width: 60px; height: 60px;
+}
+
+#cp_chart_adv_div_1, #cp_chart_adv_div_2 {
+	position: absolute;
+	top: 5px; left: 65px;
+	width: 468px; height: 60px
+}
+
+#cp_chart_adv_1, #cp_chart_adv_2 {
+	border-width: 0px;
+	width: 468px; height: 60px;
+	padding: 0px;
+}
+
+#cp_chart_date_div_1, #cp_chart_date_div_2 {
+	position: absolute;
+	top: 70px; left: 0px;
+	width: 160px; height: 125px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+label {
+	font-weight: bold;
+	font-size: 15px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#cp_chart_date_select_1, #cp_chart_date_select_2 {
+	height: 70px; width: 155px;
+	font-size: 11px;
+}
+#cp_chart_date_div_1 option, #cp_chart_date_div_2 option {
+	font-size: 11px;
+}
+
+button {
+	margin-top: 2px;
+}
+
+.ui-button-text {
+	padding-left: 4px !important; padding-right: 4px !important;
+	padding-top: 3px !important; padding-bottom: 3px !important;
+	font-size: 11px !important;
+}
+
+#cp_chart_sort_div_1, #cp_chart_sort_div_2 {
+	position: absolute;
+	top: 210px; left: 0px;
+	width: 160px; height: 50px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+#cp_chart_sort_select_1, #cp_chart_sort_select_2 {
+	height: 20px; width: 155px;
+	font-size: 11px;
+}
+
+#cp_chart_sort_div_1 option, #cp_chart_sort_div_2 option {
+	font-size: 11px;
+}
+
+#cp_chart_place_div_1, #cp_chart_place_div_2 {
+	position: absolute;
+	top: 275px; left:0px;
+	width: 160px; bottom: 5px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+#cp_chart_place_select_1, #cp_chart_place_select_2 {
+	position: absolute;
+	left: 5px; top:55px;
+	bottom: 5px; height:auto;
+	width: 155px;
+	font-size: 11px;
+}
+
+#cp_chart_place_div_1 option, #cp_chart_place_div_2 option {
+	font-size: 11px;
+}
+
+#cp_chart_tabs_1, #cp_chart_tabs_2 {
+	position: absolute;
+	left: 175px; top: 70px;
+	height: auto; width: auto;
+	bottom: 5px; right: 0px;
+}
+
+#cp_chart_tabs_1 a, #cp_chart_tabs_2  a {
+	font-size:12px;
+}
+
+#cp_chart_tabs_1 div, #cp_chart_tabs_2  div {
+	background-color: white;
+	margin: 0px; padding: 0px;
+	height: 250px;
+	overflow-x: scroll; overflow-y: hidden;
+}
+
+
+#cp_chart_popdev_div {
+	visibility: hidden;
+	height: 470px; width: 500px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#cp_chart_popdev_chart {
+	height: 300px; width: 468px;
+	background-color: #eee;
+	padding: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#cp_chart_popdev_close {
+	display: none;
+}
+
+#cp_chart_popdev_div h1 {
+	font-family: Calibri, franklin gothic medium cond, arial narrow, arial, helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 26px;
+	padding: 0px;
+	color: black;
+	margin: 0px; margin-top: 2px;
+	white-space: nowrap;
+}
+
+#cp_chart_popdev_div h2 {
+	font-family: Calibri, Arial, helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 17px;
+	padding: 0px;
+	color: black;
+	margin: 0px; margin-top: 2px;
+}
+
+#cp_chart_popdev_div p {
+	font-family: Calibri, Arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 14px;
+	text-align: right;
+	color: black;
+	margin: 0px; margin-bottom: 5px;
+}
+
+#cp_chart_popdev_adv {
+	width: 468px; height: 60px;
+	padding: 0px;
+	margin-top: 5px;
+}
+
+#cp_chart_popdev_adv iframe {
+	font-family: Arial, sans-serif;
+}

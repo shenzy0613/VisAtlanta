@@ -1,0 +1,896 @@
+[
+  {
+    "CTN":20100,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":1750
+  },
+  {
+    "CTN":20200,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":1943
+  },
+  {
+    "CTN":20300,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":3574
+  },
+  {
+    "CTN":20400,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":2376
+  },
+  {
+    "CTN":20500,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":2802
+  },
+  {
+    "CTN":20600,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":2000
+  },
+  {
+    "CTN":20700,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":2032
+  },
+  {
+    "CTN":20801,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":2444
+  },
+  {
+    "CTN":20802,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":3945
+  },
+  {
+    "CTN":20900,
+    "Superdistrict":"Atlanta-DeKalb",
+    "County":"DeKalb",
+    "Population":5402
+  },
+  {
+    "CTN":21100,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":8180
+  },
+  {
+    "CTN":21202,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":6745
+  },
+  {
+    "CTN":21204,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":4561
+  },
+  {
+    "CTN":21208,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":3200
+  },
+  {
+    "CTN":21209,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":5249
+  },
+  {
+    "CTN":21301,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":3932
+  },
+  {
+    "CTN":21302,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":8354
+  },
+  {
+    "CTN":21401,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":12962
+  },
+  {
+    "CTN":21403,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":6493
+  },
+  {
+    "CTN":21404,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":7943
+  },
+  {
+    "CTN":21405,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":4232
+  },
+  {
+    "CTN":21406,
+    "Superdistrict":"Chamblee",
+    "County":"DeKalb",
+    "Population":9117
+  },
+  {
+    "CTN":21501,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":9568
+  },
+  {
+    "CTN":21502,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":4232
+  },
+  {
+    "CTN":21601,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":8771
+  },
+  {
+    "CTN":21602,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":4172
+  },
+  {
+    "CTN":21603,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":5145
+  },
+  {
+    "CTN":21703,
+    "Superdistrict":"NE DeKalb",
+    "County":"DeKalb",
+    "Population":4672
+  },
+  {
+    "CTN":21706,
+    "Superdistrict":"NE DeKalb",
+    "County":"DeKalb",
+    "Population":6155
+  },
+  {
+    "CTN":22200,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":8784
+  },
+  {
+    "CTN":22301,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":5657
+  },
+  {
+    "CTN":22302,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":4132
+  },
+  {
+    "CTN":22401,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":4444
+  },
+  {
+    "CTN":22402,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":5823
+  },
+  {
+    "CTN":22403,
+    "Superdistrict":"NW DeKalb",
+    "County":"DeKalb",
+    "Population":4052
+  },
+  {
+    "CTN":22500,
+    "Superdistrict":"Decatur",
+    "County":"DeKalb",
+    "Population":5361
+  },
+  {
+    "CTN":22600,
+    "Superdistrict":"Decatur",
+    "County":"DeKalb",
+    "Population":5795
+  },
+  {
+    "CTN":22700,
+    "Superdistrict":"Decatur",
+    "County":"DeKalb",
+    "Population":4433
+  },
+  {
+    "CTN":22800,
+    "Superdistrict":"Decatur",
+    "County":"DeKalb",
+    "Population":3648
+  },
+  {
+    "CTN":22900,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":3552
+  },
+  {
+    "CTN":23101,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":4484
+  },
+  {
+    "CTN":23501,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":3550
+  },
+  {
+    "CTN":23504,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":3488
+  },
+  {
+    "CTN":23505,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":2761
+  },
+  {
+    "CTN":23601,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":2502
+  },
+  {
+    "CTN":23602,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":2314
+  },
+  {
+    "CTN":23603,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":3483
+  },
+  {
+    "CTN":23700,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":5854
+  },
+  {
+    "CTN":23801,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":3718
+  },
+  {
+    "CTN":23802,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":4392
+  },
+  {
+    "CTN":23803,
+    "Superdistrict":"SW DeKalb",
+    "County":"DeKalb",
+    "Population":5194
+  },
+  {
+    "CTN":100,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":4413
+  },
+  {
+    "CTN":200,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":5449
+  },
+  {
+    "CTN":400,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":1715
+  },
+  {
+    "CTN":500,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":4687
+  },
+  {
+    "CTN":600,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":5203
+  },
+  {
+    "CTN":700,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":2794
+  },
+  {
+    "CTN":800,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":1434
+  },
+  {
+    "CTN":1000,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":8587
+  },
+  {
+    "CTN":1100,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":3633
+  },
+  {
+    "CTN":1200,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":7416
+  },
+  {
+    "CTN":1300,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":4073
+  },
+  {
+    "CTN":1400,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":2182
+  },
+  {
+    "CTN":1500,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":4326
+  },
+  {
+    "CTN":1600,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":2072
+  },
+  {
+    "CTN":1700,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":2800
+  },
+  {
+    "CTN":1800,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":3927
+  },
+  {
+    "CTN":1900,
+    "Superdistrict":"CBD Atlanta",
+    "County":"Fulton",
+    "Population":4636
+  },
+  {
+    "CTN":2100,
+    "Superdistrict":"CBD Atlanta",
+    "County":"Fulton",
+    "Population":2451
+  },
+  {
+    "CTN":2200,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":1221
+  },
+  {
+    "CTN":2300,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":1476
+  },
+  {
+    "CTN":2400,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":2273
+  },
+  {
+    "CTN":2500,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":1904
+  },
+  {
+    "CTN":2600,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":914
+  },
+  {
+    "CTN":2700,
+    "Superdistrict":"CBD Atlanta",
+    "County":"Fulton",
+    "Population":1584
+  },
+  {
+    "CTN":2800,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":3547
+  },
+  {
+    "CTN":2900,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":2523
+  },
+  {
+    "CTN":3000,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":2870
+  },
+  {
+    "CTN":3100,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":1599
+  },
+  {
+    "CTN":3200,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":2015
+  },
+  {
+    "CTN":3300,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":1350
+  },
+  {
+    "CTN":3500,
+    "Superdistrict":"CBD Atlanta",
+    "County":"Fulton",
+    "Population":2241
+  },
+  {
+    "CTN":3600,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":1207
+  },
+  {
+    "CTN":3800,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":3967
+  },
+  {
+    "CTN":3900,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":1331
+  },
+  {
+    "CTN":4000,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":2231
+  },
+  {
+    "CTN":4100,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":1862
+  },
+  {
+    "CTN":4200,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":2212
+  },
+  {
+    "CTN":4300,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":2421
+  },
+  {
+    "CTN":4400,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":2238
+  },
+  {
+    "CTN":4600,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1517
+  },
+  {
+    "CTN":4800,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":936
+  },
+  {
+    "CTN":4900,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":2481
+  },
+  {
+    "CTN":5000,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1899
+  },
+  {
+    "CTN":5200,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":4094
+  },
+  {
+    "CTN":5300,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":3443
+  },
+  {
+    "CTN":5501,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":2307
+  },
+  {
+    "CTN":5502,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":2556
+  },
+  {
+    "CTN":5600,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1401
+  },
+  {
+    "CTN":5700,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1544
+  },
+  {
+    "CTN":5800,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1412
+  },
+  {
+    "CTN":6000,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":3390
+  },
+  {
+    "CTN":6100,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":3471
+  },
+  {
+    "CTN":6200,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":1311
+  },
+  {
+    "CTN":6300,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1924
+  },
+  {
+    "CTN":6400,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1346
+  },
+  {
+    "CTN":6500,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":3678
+  },
+  {
+    "CTN":6601,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1889
+  },
+  {
+    "CTN":6602,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":1129
+  },
+  {
+    "CTN":6700,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":3570
+  },
+  {
+    "CTN":6802,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":1958
+  },
+  {
+    "CTN":6900,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":3166
+  },
+  {
+    "CTN":7001,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":3943
+  },
+  {
+    "CTN":7002,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":2975
+  },
+  {
+    "CTN":7100,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":2145
+  },
+  {
+    "CTN":7500,
+    "Superdistrict":"SE Atlanta",
+    "County":"Fulton",
+    "Population":3511
+  },
+  {
+    "CTN":7601,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":7026
+  },
+  {
+    "CTN":7602,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":2418
+  },
+  {
+    "CTN":7701,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":8412
+  },
+  {
+    "CTN":7900,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":4673
+  },
+  {
+    "CTN":8000,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":4875
+  },
+  {
+    "CTN":8101,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":977
+  },
+  {
+    "CTN":8102,
+    "Superdistrict":"SW Atlanta",
+    "County":"Fulton",
+    "Population":5925
+  },
+  {
+    "CTN":8201,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":6083
+  },
+  {
+    "CTN":8301,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":2903
+  },
+  {
+    "CTN":8302,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":2000
+  },
+  {
+    "CTN":8400,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":3181
+  },
+  {
+    "CTN":8500,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":3774
+  },
+  {
+    "CTN":8601,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":4917
+  },
+  {
+    "CTN":8701,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":2055
+  },
+  {
+    "CTN":8702,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":2317
+  },
+  {
+    "CTN":8800,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":4578
+  },
+  {
+    "CTN":8901,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":7255
+  },
+  {
+    "CTN":8902,
+    "Superdistrict":"NW Atlanta",
+    "County":"Fulton",
+    "Population":5765
+  },
+  {
+    "CTN":9000,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":4417
+  },
+  {
+    "CTN":9100,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":7925
+  },
+  {
+    "CTN":9200,
+    "Superdistrict":"NE Atlanta",
+    "County":"Fulton",
+    "Population":6468
+  },
+  {
+    "CTN":9300,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":4533
+  },
+  {
+    "CTN":9401,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":8832
+  },
+  {
+    "CTN":9402,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":4073
+  },
+  {
+    "CTN":9500,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":7884
+  },
+  {
+    "CTN":9600,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":11287
+  },
+  {
+    "CTN":9700,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":3534
+  },
+  {
+    "CTN":9800,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":8821
+  },
+  {
+    "CTN":9900,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":4993
+  },
+  {
+    "CTN":10000,
+    "Superdistrict":"Buckhead",
+    "County":"Fulton",
+    "Population":11488
+  },
+  {
+    "CTN":10101,
+    "Superdistrict":"Sandy Springs",
+    "County":"Fulton",
+    "Population":14100
+  },
+  {
+    "CTN":10206,
+    "Superdistrict":"Sandy Springs",
+    "County":"Fulton",
+    "Population":4977
+  },
+  {
+    "CTN":10207,
+    "Superdistrict":"Sandy Springs",
+    "County":"Fulton",
+    "Population":9410
+  }
+]

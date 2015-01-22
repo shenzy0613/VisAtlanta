@@ -1,0 +1,896 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TransAtlanta</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Loading Bootstrap -->
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Loading Flat UI -->
+	<link href="css/flat-ui.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> -->
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <![endif]-->
+      <link rel="stylesheet" type="text/css" href="css/app.css">
+
+  </head>
+  <body>
+
+  	
+  	<!-- <header class="container-fluid"> -->
+  		<!-- <h3>TransAtlanta: Visualization for transportation data</h3> -->
+<!--   		<div class="alert alert-warning fade in">
+        	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        	<strong>Zoom in to view Marta Ridership and Walkscore</strong>
+      	</div> -->
+  	<!-- </header> -->
+  	<div class="container-fluid appContainer">
+
+
+  		<div class="topNav">
+  			
+  			<div class="mapView navSection">
+  				<div class="navBtn"></div>
+  			</div>
+
+  			<div class="treemapView navSection">
+  				<div class="navBtn"></div>
+  			</div>
+
+  			<div class="detailView navSection">
+  				<div class="navBtn"></div>
+  			</div>
+
+  			<div class="compView navSection">
+  				<div class="navBtn"></div>
+  			</div>
+
+
+  			<div class="detailComp subView navSection">
+  				
+  			</div>
+  		</div>
+  		<div id="mapContainer" class="mapContainer sectionContainer">
+
+
+  			<div id="map-canvas"></div>
+  			<div id="legendButton"style="padding: 5px; z-index: 0; position: absolute; left: 20px; bottom: 30px;background: white;border-radius: 5px;">
+  				<div title="Show Legend" style="background: white;">
+  					<div style="background: white;">
+  					<b style="background: white;">Legend</b>
+	  				</div>
+	  			</div>
+  			</div>
+
+  			<div id="legendPercentage" style="position:fixed; bottom:60px; left:20px;hide:true;"><img src="/img/percentage.png"/></div>
+  			<div id="legendNumber" style="position:fixed; bottom:60px; left:20px;hide:true;"><img src="/img/Number.png"/></div>
+  			<div id="legendPercentageMarta" style="position:fixed; bottom:60px; left:20px;hide:true;"><img src="/img/percentage_Marta.png"/></div>
+  			<div id="legendNumberMarta" style="position:fixed; bottom:60px; left:20px;hide:true;"><img src="/img/Number_Marta.png"/></div>
+  			<div id="mapInfoWindow">this is a map info window</div>
+  			
+		  	<div class="layerControlContainer">
+		  		<div class="layerControl">
+			  		<ul class="nav">
+				    	<li class="active" style="padding: 5px 0px 0 0;font-size: 18px;font-family: lato;color: #555555;">Map</li>
+				    </ul>
+				    <label class="checkbox" for="censusTractCheckbox" id="censusTractCheckboxLabel">
+				        <input type="checkbox" value="checked" id="censusTractCheckbox" data-toggle="checkbox" checked>Census Tract
+				    </label>
+				    <label class="checkbox" for="transitCheckbox" id="transitCheckboxLabel">
+				        <input type="checkbox" value="" id="transitCheckbox" data-toggle="checkbox">
+				    Transit
+				    </label>
+				    <label class="checkbox" for="martaCheckbox" id="martaCheckboxLabel">
+				        <input type="checkbox" value="" id="martaCheckbox" data-toggle="checkbox">
+				    MARTA
+				    </label>
+				</div>
+		  	</div>
+		    
+<!-- 		  	<div class="mapLayer">
+
+
+ 			<label class="checkbox" for="censusTractCheckbox" onclick="censusTractCheckboxFunc">
+            	<input type="checkbox" checked="checked" value="censusTract" id="censusTractCheckbox" data-toggle="checkbox">
+            Census Tract
+          	</label>
+
+	          <label class="checkbox" for="transitCheckbox" onclick="transitCheckboxFunc">
+	            <input type="checkbox" value="transit" id="transitCheckbox" data-toggle="checkbox" >
+	            Transit
+	          </label>
+	          <label class="checkbox" for="martaCheckbox" onclick="martaCheckboxFunc">
+	            <input type="checkbox" value="marta" id="martaCheckbox" data-toggle="checkbox">
+	            Marta Ridership &amp; Walkscore
+	          </label>
+	          <label class="checkbox" for="vacantCheckbox" onclick="vacantChecboxFunc">
+	            <input type="checkbox" value="" id="vacantCheckbox" data-toggle="checkbox" >
+	            Vacant property
+	          </label>
+
+	       
+	        </div>
+ -->
+  			<div class="ctrlContainer">
+  					<!-- <h3>Control</h3> -->
+  					<!-- Nav tabs -->
+
+
+  					<ul class="nav nav-tabs">
+  						<li class="active"><a href="#ctrl" data-toggle="tab" id="Control">Control</a></li>
+  						<li><a href="#filter" data-toggle="tab" id="Filter">Filter</a></li>
+
+  					</ul>
+
+  					<!-- Tab panes -->
+  					<div class="tab-content">
+  						<div class="tab-pane active" id="ctrl">
+  							<div class="radioOption">
+
+  								<!-- <label class="radio" title="this is some text for population" id="populationRadio">
+						            <input type="radio" name="ctrlOptions"  value="population" data-toggle="radio">
+						            Population
+						        </label> -->
+						        <a class="btn btn-block btn-lg btn-primary" id="controlClear" style="margin:5px; width: 170px;">Clear</a>
+
+						        <label class="radioToggle" data-ctrl-option="population" id="populationRadio">
+						            Population
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="population">
+						        	<label class="radio" id="PopulationRadio0">
+							            <input type="radio" name="ctrlOptions" value="population" data-toggle="radio" id="PopChecked">
+							            Population
+							        </label>
+							    </div>
+
+						        <label class="radioToggle" data-ctrl-option="age" id="ageRadio">
+						            Age
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="age">
+						        	<label class="radio" id="AgeRadio0">
+							            <input type="radio" name="ageOptions" value="medianAge" data-toggle="radio" id="MedianChecked">
+							            Median Age
+							        </label>
+						        	<label class="radio" id="AgeRadio1">
+							            <input type="radio" name="ageOptions" value="ageUnder5" data-toggle="radio" >
+							            Age 5-
+							        </label>
+							        <label class="radio" id="AgeRadio2">
+							            <input type="radio" name="ageOptions" value="age6to18" data-toggle="radio" >
+							            Age 6-18
+							        </label>
+							        <label class="radio" id="AgeRadio3">
+							            <input type="radio" name="ageOptions" value="age18to29" data-toggle="radio" >
+							            Age 18-29
+							        </label>
+							        <label class="radio" id="AgeRadio4">
+							            <input type="radio" name="ageOptions" value="age30to44" data-toggle="radio" >
+							            Age 30-44
+							        </label>
+							        <label class="radio" id="AgeRadio5">
+							            <input type="radio" name="ageOptions" value="age45to64" data-toggle="radio" >
+							            Age 45-64
+							        </label>
+							        <label class="radio" id="AgeRadio6">
+							            <input type="radio" name="ageOptions" value="age65plus" data-toggle="radio" >
+							            Age 65+
+							        </label>
+						        </div>
+						        <!-- <div class="subRadioOption" data-ctrl-option="age">
+						        	<label class="radio">
+							            <input type="radio" name="ageOptions" id="" value="ageChildren" data-toggle="radio" >
+							            Children
+							        </label>
+							        <label class="radio">
+							            <input type="radio" name="ageOptions" id="" value="ageAdult" data-toggle="radio" >
+							            Adult
+							        </label>
+							        <label class="radio">
+							            <input type="radio" name="ageOptions" id="" value="ageSenior" data-toggle="radio" >
+							            Senior
+							        </label>
+						        </div> -->
+
+						        <label class="radioToggle" data-ctrl-option="race" id="raceRadio">Race
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="race">
+						        	<label class="radio" id="DiversityRadio">
+							            <input type="radio" name="raceOptions" value="raceWhite" data-toggle="radio" id="DiversityIndexChecked">
+							            Diversity Index
+							        </label>
+						        	<label class="radio" id="WhiteRadio">
+							            <input type="radio" name="raceOptions" value="raceWhite" data-toggle="radio" >
+							            White
+							        </label>
+							        <label class="radio" id="BlackRadio">
+							            <input type="radio" name="raceOptions" value="raceBlack" data-toggle="radio" >
+							            African American
+							        </label>
+							        <label class="radio" id="AsianRadio">
+							            <input type="radio" name="raceOptions" value="raceAsian" data-toggle="radio" >
+							            Asian
+							        </label>
+							        <label class="radio" id="HispanicRadio">
+							            <input type="radio" name="raceOptions" value="raceHispanic" data-toggle="radio" >
+							            Hispanic
+							        </label>
+							        <label class="radio" id="OtherRadio">
+							            <input type="radio" name="raceOptions" value="raceOther" data-toggle="radio" >
+							            Other
+							        </label>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="education">Education</label>
+
+						        <div class="subRadioOption" data-ctrl-option="education">
+						        	<label class="radio" id="NoRadio">
+							            <input type="radio" name="raceOptions" value="educationNo" data-toggle="radio" >
+							            No High School Diploma
+							        </label>
+						        	<label class="radio" id="HighSchoolRadio">
+							            <input type="radio" name="raceOptions" value="educationHighSchool" data-toggle="radio" >
+							            High School
+							        </label>
+							        <label class="radio" id="BachelorRadio">
+							            <input type="radio" name="raceOptions" value="educationBachelor" data-toggle="radio" >
+							            Bachelor Degree
+							        </label>
+							        <label class="radio" id="GraduateRadio">
+							            <input type="radio" name="raceOptions" value="educationGraduate" data-toggle="radio" >
+							            Graduate / Professional Degree
+							        </label>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="householdIncome" id="HouseholdRadio">Household Income</label>
+
+						        <div class="subRadioOption" data-ctrl-option="householdIncome">
+						        	<label class="radio" id="HouseRadio0">
+							            <input type="radio" name="raceOptions" value="householdIncome35k" data-toggle="radio" id="MHIChecked">
+							            Median Household Income
+							        </label>
+						        	<label class="radio" id="HouseRadio1">
+							            <input type="radio" name="raceOptions" value="householdIncome35k" data-toggle="radio" >
+							            &lt; $35k
+							        </label>
+							        <label class="radio" id="HouseRadio2">
+							            <input type="radio" name="raceOptions" value="householdIncome35k75k" data-toggle="radio" >
+							            $35k - $75k
+							        </label>
+							        <label class="radio" id="HouseRadio3">
+							            <input type="radio" name="raceOptions" value="householdIncome75k" data-toggle="radio" >
+							            $75k - $200K
+							        </label>
+							        <label class="radio" id="HouseRadio4">
+							            <input type="radio" name="raceOptions" value="householdIncome200k" data-toggle="radio" >
+							            > $200k
+							        </label>
+									<label class="radio" id="PovertyRadio">
+							            <input type="radio" name="raceOptions" value="householdIncomePoverty" data-toggle="radio" >
+							            Poverty
+							        </label>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="workTransportation" id="TransportationRadiobutton">Transportation to work</label>
+
+						        <div class="subRadioOption" data-ctrl-option="workTransportation">
+						        	<label class="radio" id="TransportationRadiobutton1">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Drive Alone
+							        </label>
+							        <label class="radio" id="TransportationRadiobutton2">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Car Pool
+							        </label>
+							        <label class="radio" id="TransportationRadiobutton3">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Public Transit
+							        </label>
+
+							        <label class="radio" id="TransportationRadiobutton4">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Work at Home
+							        </label>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="housing" id="HousingRadio">Housing</label>
+
+						        <div class="subRadioOption" data-ctrl-option="housing">
+						        	<label class="radio" id="OwnerAffordabilityRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Owner Affordability
+							        </label>
+							        <label class="radio" id="RenterAffordabilityRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Renter Affordability
+							        </label>
+							        <label class="radio" id="ValueRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" id="ValueChecked">
+							            Median Home Value
+							        </label>
+							        <label class="radio" id="RentRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" id="ValueChecked">
+							            Median Rent
+							        </label>
+							        <label class="radio" id="VacancyRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Vacancy
+							        </label>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="employment">Employment
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="employment">
+						        	<!-- <label class="radio" id="EmployedRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Employed
+							        </label> -->
+							        <label class="radio" id="UnemployedRadio">
+							            <input type="radio" name="raceOptions" value="option1" data-toggle="radio" >
+							            Unemployed
+							        </label>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="salary">
+						            Jobs
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="salary">
+						        	<label class="radio" id="SalaryRadiobutton1">
+							            <input type="radio" name="salaryOptions" value="salaryLt1250 month" data-toggle="radio" >
+							            &lt; $1250 /month
+							        </label>
+							        <label class="radio" id="SalaryRadiobutton2">
+							            <input type="radio" name="salaryOptions" value="salaryGt1250Lt3333" data-toggle="radio" >
+							            $1250 - $3333 /month
+							        </label>
+							        <label class="radio" id="SalaryRadiobutton3">
+							            <input type="radio" name="salaryOptions" value="salaryGt3333" data-toggle="radio" >
+							            &gt; $3333 /month
+							        </label>
+							        <label class="radio" id="SalaryRadiobutton4">
+							            <input type="radio" name="salaryOptions" value="salaryLt1250 month" data-toggle="radio" >
+							            Jobs age 29-
+							        </label>
+							        <label class="radio" id="SalaryRadiobutton5">
+							            <input type="radio" name="salaryOptions" value="salaryLt1250 month" data-toggle="radio" >
+							            Jobs age 30-54
+							        </label>
+							        <label class="radio" id="SalaryRadiobutton6">
+							            <input type="radio" name="salaryOptions" value="salaryLt1250 month" data-toggle="radio" >
+							            Jobs age 55+
+							        </label>
+						        </div>
+
+  							</div>
+  						</div>
+
+  						<div class="tab-pane" id="filter">
+  							<div class="radioOption">
+  								<a  class="btn btn-block btn-lg btn-primary" id="filterClear" style="margin:5px; width: 170px;">Clear</a>
+  								<a  class="btn btn-block btn-lg btn-primary" id="filterCompare" style="margin:5px; width: 170px;">Compare</a>
+  								<label class="radioToggle" data-ctrl-option="population" id="populationRadio">
+						            Population
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="population">
+							        <label class="slider" title="this is some text for population" id="populationFilter">
+							            Population
+							        </label>
+
+							        <div class="filterContainer">
+							            <input class="slider" type="text" id="popFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+	  									<div id="popFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+							        </div>
+							    </div>
+
+						        <label class="radioToggle" data-ctrl-option="age" id="ageRadio">
+						            Age
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="age">
+						        	<label class="slider" id="AgeRadio0">
+							            Median Age
+							        </label>
+
+							        <div class="filterContainer">
+							            <input class="slider" type="text" id="medAgeFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+	  									<div id="medAgeFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+							        </div>
+
+						        	<label class="slider" id="AgeRadio1">
+							            Age 5-
+							        </label>
+
+							        <div class="filterContainer">
+							            <input class="slider" type="text" id="Age5FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+	  									<div id="Age5Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+							        </div>
+
+							        <label class="slider" id="AgeRadio2">
+							            Age 6-18
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Age6FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Age6Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="AgeRadio3">
+							            Age 18-29
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Age18FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Age18Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="AgeRadio4">
+							            Age 30-44
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Age30FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Age30Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="AgeRadio5">
+							            Age 45-64
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Age45FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Age45Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="AgeRadio6">
+							            Age 65+
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Age65FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Age65Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="race" id="raceRadio">Race
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="race">
+						        	<label class="slider" id="DiversityRadio">
+							            Diversity
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="DiverFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="DiverFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="WhiteRadio">
+							            White
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="WhiteFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="WhiteFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="BlackRadio">
+							            African American
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="BlackFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="BlackFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="AsianRadio">
+							            Asian
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="AsianFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="AsianFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="HispanicRadio">
+							            Hispanic
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="HispaFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="HispaFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="education">Education</label>
+
+						        <div class="subRadioOption" data-ctrl-option="education">
+						        	<label class="slider" id="NoRadio">
+							            No High School Diploma
+							        </label>
+
+							        <p style="clear:both"></p>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="NHFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="NHFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="HighSchoolRadio">
+							            High School
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="HFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="HFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="BachelorRadio">
+							            Bachelor Degree
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="BFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="BFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="GraduateRadio">
+							            Graduate / Professional Degree
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="GFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="GFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="householdIncome" id="HouseholdRadio">Household Income</label>
+
+						        <div class="subRadioOption" data-ctrl-option="householdIncome">
+						        	<label class="slider" id="HouseRadio0">
+							            Median Household Income
+							        </label>
+
+							        <p style="clear:both"></p>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="MHIFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="MHIFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="HouseRadio1">
+							            &lt; $35k
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Income1FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Income1Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="HouseRadio2">
+							            $35k - $75k
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Income2FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Income2Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="HouseRadio3">
+							           	$75k - $200K
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Income3FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Income3Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="HouseRadio4">
+							            > $200k
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Income4FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Income4Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+									<label class="slider" id="PovertyRadio">
+							            Poverty
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="PovertyFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="PovertyFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="workTransportation" id="TransportationRadiobutton">Transportation to work</label>
+
+						        <div class="subRadioOption" data-ctrl-option="workTransportation">
+						        	<label class="slider" id="TransportationRadiobutton1">
+							            Drive Alone
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="DriveAloneFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="DriveAloneFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="TransportationRadiobutton2">
+							            Car Pool
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="CarPoolFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="CarPoolFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="TransportationRadiobutton3">
+							            Public Transit
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="PTFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="PTFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="TransportationRadiobutton4">
+							            Work at Home
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="HomeFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="HomeFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="TransportationRadiobutton4">
+							            Other
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="OtherTransFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="OtherTransFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="housing" id="HousingRadio">Housing</label>
+
+						        <div class="subRadioOption" data-ctrl-option="housing">
+						        	<label class="slider" id="OwnerAffordabilityRadio">
+							            Owner Affordability
+							        </label>
+
+							        <p style="clear:both"></p>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="OAFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="OAFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="RenterAffordabilityRadio">
+							            Renter Affordability
+							        </label>
+
+							        <p style="clear:both"></p>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="RAFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="RAFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="ValueRadio">
+							            Median Home Value
+							        </label>
+
+							        <p style="clear:both"></p>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="ValueFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="ValueFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="ValueRadio">
+							            Median Rent
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="RentFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="RentFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="VacancyRadio">
+							            Vacancy
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="VacancyFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="VacancyFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="employment">Employment
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="employment">
+						        	<label class="slider" id="EmployedRadio">
+							            Unemployed
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="EmFilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="EmFilter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+						        </div>
+
+						        <label class="radioToggle" data-ctrl-option="salary">
+						            Jobs
+						        </label>
+
+						        <div class="subRadioOption" data-ctrl-option="salary">
+						        	<label class="slider" id="SalaryRadiobutton1">
+							            &lt; $1250 /month
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Salary1FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Salary1Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="SalaryRadiobutton2">
+							            $1250 - $3333 /month
+							        </label>
+
+							        <p style="clear:both"></p>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Salary2FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Salary2Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+							        <label class="slider" id="SalaryRadiobutton3">
+							            &gt; $3333 /month
+							        </label>
+
+							        <div class="filterContainer">
+						            	<input class="slider" type="text" id="Salary3FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Salary3Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+									<label class="slider" id="SalaryRadiobutton4">
+						        		Jobs age 29-
+						        	</label>
+
+						        	<div class="filterContainer">
+						            	<input class="slider" type="text" id="Salary4FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Salary4Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="SalaryRadiobutton5">
+						        		Jobs age 30-54
+						        	</label>
+
+						        	<div class="filterContainer">
+						            	<input class="slider" type="text" id="Salary5FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Salary5Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+
+						        	<label class="slider" id="SalaryRadiobutton6">
+						        		Jobs age 55+
+						        	</label>
+
+						        	<div class="filterContainer">
+						            	<input class="slider" type="text" id="Salary6FilterAmount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  										<div id="Salary6Filter" class="FilterDiv" style="padding-left: 10px;"></div>
+						        	</div>
+						        </div>
+						        
+						    </div>
+  						</div>
+
+
+  						<div class="tab-pane" id="filter">
+  							<div class="radioOption">
+  								<label class="radio" title="this is some text for population" id="vacancyRadio">
+						            <input type="radio" name="ctrlOptions"  value="population" data-toggle="radio">
+						            Vacancy
+						        </label>
+						        <div class="filterContainer">
+
+						            <input class="slider" type="text" id="amount" style="border: 0; font-family: Roboto; padding-left: 10px;" disabled/>
+  									<div id="slider-range" style="padding-left: 10px;"></div>
+						        </div>
+						    </div>
+  						</div>
+  					</div>
+  			</div>
+
+
+  			<!-- </div> -->
+  		</div>
+
+
+  		<div id="treemapContainer" class="treemapContainer sectionContainer">
+  			<div id="treemap_div" style=""></div>
+		    <div id="tooltip">
+		    	<span id="tooltipTopLine"></span><br />
+		    	<span id="tooltipBottomLine"></span>
+		    </div>
+  		</div>
+
+  		<div id="detailContainer" class=" sectionContainer">
+
+
+  			<div class="detail_div"></div>
+<!--   			<div id="agePiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="racePiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="educationPiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="incomePiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="povertyPiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="transportationPiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="housingAffordabilityTable" style="width: 500px; height: 200px;"></div>
+		    <div id="housingValueTable" style="width: 500px; height: 100px;"></div>
+		    <div id="housingVacancyTable" style="width: 500px; height: 300px;"></div>
+		    <div id="unemploymentTable" style="width: 500px; height: 300px;"></div>
+		    <div id="jobPayPiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div>
+		    <div id="jobAgePiechart" style="width: 50%; height: 500px; background: #f3f3f3;"></div> -->
+  		</div>
+
+  		<div id="compContainer" class=" sectionContainer">
+  			<!-- <iframe src="MultipleCompare.html"><iframe> -->
+
+  			<div class="comp_div"></div>
+  		</div>	
+  	</div>
+  	<footer></footer>
+
+  	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  	<script type="text/javascript">
+  		// Load the Visualization API and the piechart package.
+    	google.load('visualization', '1', {packages:['corechart', 'table', 'treemap']});
+  	</script>
+
+  	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  	<!-- Load JS here for greater good =============================-->
+  	<script src="js/lib/jquery-1.8.3.min.js"></script>
+  	<script src="js/lib/jquery-ui-1.10.3.custom.min.js"></script>
+  	<script src="js/lib/jquery.ui.touch-punch.min.js"></script>
+  	<script src="js/lib/bootstrap.min.js"></script>
+  	<script src="js/lib/bootstrap-select.js"></script>
+  	<script src="js/lib/bootstrap-switch.js"></script>
+  	<script src="js/lib/flatui-checkbox.js"></script>
+  	<script src="js/lib/flatui-radio.js"></script>
+  	<script src="js/lib/jquery.tagsinput.js"></script>
+  	<script src="js/lib/jquery.placeholder.js"></script>
+  	<script src="https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.1.1/src/data.json"></script>
+    <script src="https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.1.1/src/markerclusterer.js"></script>
+    <script src="https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.1.1/src/markerclusterer_packed.js"></script>
+  	<script type="text/javascript" src="https://geoxml3.googlecode.com/svn/branches/polys/geoxml3.js"></script>
+    <script type="text/javascript" src="https://geoxml3.googlecode.com/svn/trunk/ProjectedOverlay.js"></script>
+
+	<script type="text/javascript" src="js/vis/detailView.js"></script>
+	<script type="text/javascript" src="js/vis/treemap.js"></script>
+	<script type="text/javascript" src="js/vis/heatmap.js"></script>
+	<script type="text/javascript" src="js/vis/compare.js"></script>
+
+	
+  	<script type="text/javascript" src="js/map.js"></script>
+  	<script type="text/javascript" src="js/app.js"></script>
+
+  	<script type="text/javascript" src="js/filter.js"></script>
+	<script type="text/javascript" src="js/filterpanel.js"></script>
+  </body>
+  </html>
